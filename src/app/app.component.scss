@@ -1,0 +1,9 @@
+ion-app ion-header{
+    height: 5vh;
+}
+ion-app ion-header ion-toolbar{
+    text-align: center;
+}
+ion-app ion-router-outlet{
+    top: 5vh;
+}
