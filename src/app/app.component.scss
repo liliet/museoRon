@@ -1,9 +1,20 @@
-ion-app ion-header{
-    height: 5vh;
+ion-app{
+    background: url("/assets/background.jpg") no-repeat fixed;
+    background-size: cover;
 }
-ion-app ion-header ion-toolbar{
-    text-align: center;
+ion-menu{
+    --width: 100%;
+    ion-content{
+        --background: rgba(255, 255, 255, .8);
+    }
 }
-ion-app ion-router-outlet{
-    top: 5vh;
+ion-header{
+    height: 18%;
+}
+ion-toolbar{
+    height: 100%;
+    --min-height: 100%;
+}
+ion-router-outlet{
+    top: 18%;
 }

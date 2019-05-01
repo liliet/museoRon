@@ -1,5 +1,5 @@
 <ion-app>
-    <ion-menu>
+    <ion-menu side="end" type="overlay" swipeGesture="false">
       <ion-content>
         <ion-list>
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
@@ -14,9 +14,9 @@
       </ion-content>
     </ion-menu>
     <ion-header>
-      <ion-toolbar>
+      <ion-toolbar no-border mode="ios">
         <ion-title>
-          Museo del Ron Santiago de Cuba
+          <img src="/assets/title_header.png">
         </ion-title>
         <ion-buttons slot="end">
           <ion-menu-button></ion-menu-button>
