@@ -4,8 +4,9 @@ ion-app{
 }
 ion-menu{
     --width: 100%;
+    --background: rgba(255, 255, 255, .9);
     ion-content{
-        --background: rgba(255, 255, 255, .8);
+        --background: transparent;
     }
 }
 ion-header{
@@ -15,6 +16,22 @@ ion-toolbar{
     height: 100%;
     --min-height: 100%;
 }
-ion-router-outlet{
+ion-menu-button{
+    padding-right: 1.5em;
+}
+ion-menu .vertical-align {
+  vertical-align: center;
+}
+ion-menu ion-button {
+  display: block;
+  width: 17em;
+  margin: 2.5em auto;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+#closeMenuBtn {
+    width: 10em;
+}
+ion-router-outlet {
     top: 18%;
 }

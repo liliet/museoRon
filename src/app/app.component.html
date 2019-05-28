@@ -1,25 +1,49 @@
 <ion-app>
     <ion-menu side="end" type="overlay" swipeGesture="false">
+      <ion-header no-border>
+        <ion-toolbar no-border mode="ios">
+          <ion-title>
+            <img src="/assets/title_header.png">
+          </ion-title>
+          <ion-buttons slot="end">
+            <ion-button id="closeMenuBtn" (click)="closeMenu()">
+              <ion-icon src="/assets/icon/close_icon.svg" size="large"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
       <ion-content>
-        <ion-list>
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
-            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
-              <ion-icon slot="start" [name]="p.icon"></ion-icon>
-              <ion-label>
-                {{p.title}}
-              </ion-label>
-            </ion-item>
-          </ion-menu-toggle>
-        </ion-list>
+        <div class="vertical-align">
+          <ion-button shape="round" fill="outline" size="large" [routerLink]="['/historia']" (click)="closeMenu()">
+            <ion-label>Historia del Ron</ion-label>
+          </ion-button>
+          <ion-button shape="round" fill="outline" size="large" [routerLink]="['/list']" (click)="closeMenu()">
+            <ion-label>Obtención del Ron</ion-label>
+          </ion-button>
+          <ion-button shape="round" fill="outline" size="large" [routerLink]="['/home']" (click)="closeMenu()">
+            <ion-label>Personalidades</ion-label>
+          </ion-button>
+          <ion-button shape="round" fill="outline" size="large" [routerLink]="['/home']" (click)="closeMenu()">
+            <ion-label>Roneras de Cuba</ion-label>
+          </ion-button>
+          <ion-button shape="round" fill="outline" size="large" [routerLink]="['/home']" (click)="closeMenu()">
+            <ion-label>Galería de Imágenes</ion-label>
+          </ion-button>
+          <ion-button shape="round" fill="outline" size="large" [routerLink]="['/home']" (click)="closeMenu()">
+            <ion-label>Conferencias</ion-label>
+          </ion-button>
+        </div>
       </ion-content>
     </ion-menu>
-    <ion-header>
+    <ion-header no-border>
       <ion-toolbar no-border mode="ios">
         <ion-title>
           <img src="/assets/title_header.png">
         </ion-title>
         <ion-buttons slot="end">
-          <ion-menu-button></ion-menu-button>
+          <ion-menu-button>
+            <ion-icon src="/assets/icon/menu_icon.svg" size="large"></ion-icon>
+          </ion-menu-button>
         </ion-buttons>
       </ion-toolbar>
     </ion-header>

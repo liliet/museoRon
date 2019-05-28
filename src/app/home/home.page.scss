@@ -1,3 +1,13 @@
 ion-content {
   --background: transparent;
 }
+.vertical-align {
+  vertical-align: center;
+}
+ion-button {
+  display: block;
+  width: 17em;
+  margin: 2.5em auto;
+  font-size: 16px;
+  text-transform: uppercase;
+}

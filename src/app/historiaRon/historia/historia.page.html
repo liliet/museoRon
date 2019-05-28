@@ -1,0 +1,32 @@
+<ion-content class="content">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button size="large" color="primary" href="">Historia del Ron Cubano</ion-button>
+      <ion-icon slot="icon-only" src="/assets/icon/dot_icon.svg" class="activated"></ion-icon>
+      <ion-button size="large" href="">Bacardí</ion-button>
+      <ion-icon slot="icon-only" src="/assets/icon/dot_icon.svg"></ion-icon>
+      <ion-button size="large" href="">Nave Don Pancho</ion-button>
+      <ion-icon slot="icon-only" src="/assets/icon/dot_icon.svg"></ion-icon>
+      <ion-button size="large" href="">Rones Antiguos de Cuba</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="7">
+        <div class="text" [innerHtml]="textContent"></div>
+      </ion-col>
+      <ion-col>
+        <ion-slides [options]="sliderOpts" scrollbar="true">
+          <ion-slide *ngFor="let img of images">
+            <ion-card>
+              <ion-card-header>
+                <img [src]="img.src" fxLayoutAlign="center start"/>
+              </ion-card-header>
+              <ion-card-title *ngIf="img.label" color="primary">{{ img.label }}</ion-card-title>
+            </ion-card>
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

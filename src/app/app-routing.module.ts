@@ -14,7 +14,11 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
-  }
+  },
+  {
+    path: 'historia',
+    loadChildren: './historiaRon/historia/historia.module#HistoriaPageModule'
+  },
 ];
 
 @NgModule({
