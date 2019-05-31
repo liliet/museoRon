@@ -1,22 +1,22 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ImageModalPage } from './image-modal.page';
+import { VerticalGalleryComponent } from './vertical-gallery.component';
 
-describe('ImageModalPage', () => {
-  let component: ImageModalPage;
-  let fixture: ComponentFixture<ImageModalPage>;
+describe('VerticalGalleryComponent', () => {
+  let component: VerticalGalleryComponent;
+  let fixture: ComponentFixture<VerticalGalleryComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ImageModalPage ],
+      declarations: [ VerticalGalleryComponent ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ImageModalPage);
+    fixture = TestBed.createComponent(VerticalGalleryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,10 @@
+<ion-slides [options]="sliderOpts" scrollbar="true">
+  <ion-slide *ngFor="let img of images" (click)="openDetail(img)">
+    <ion-card>
+      <ion-card-header>
+        <img [src]="img.src" fxLayoutAlign="center start" />
+      </ion-card-header>
+      <ion-card-title *ngIf="img.label" color="primary">{{ img.label }}</ion-card-title>
+    </ion-card>
+  </ion-slide>
+</ion-slides>

@@ -1,4 +1,4 @@
-<ion-content fullscreen>
+<ion-header no-border>
   <ion-toolbar no-border>
     <ion-buttons slot="end">
       <ion-button id="closeModalBtn" (click)="closeModal()">
@@ -6,6 +6,5 @@
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
-  <ion-img [src]="img.src"></ion-img>
-  <ion-label *ngIf="img.label">{{ img.label }}</ion-label>
-</ion-content>
+</ion-header>
+<ion-content [innerHtml]="content" class="content"></ion-content>
