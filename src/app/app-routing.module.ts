@@ -13,7 +13,7 @@ const routes: Routes = [
   },
   {
     path: 'historia',
-    loadChildren: './historiaRon/historia/historia.module#HistoriaPageModule'
+    loadChildren: './historia/historia.module#HistoriaPageModule'
   },
 ];
 

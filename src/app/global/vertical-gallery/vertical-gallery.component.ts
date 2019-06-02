@@ -15,8 +15,7 @@ export class VerticalGalleryComponent implements OnInit {
     zoom: false,
     spaceBetween: 10,
     slidesPerView: 'auto',
-    direction: 'vertical',
-    scrollbar: { hide: false }
+    direction: 'vertical'
   };
 
   constructor(

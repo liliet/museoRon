@@ -1,0 +1,9 @@
+<ion-header no-border>
+  <sp-menu-page [menus]="menus" [submenus]="submenus"></sp-menu-page>
+</ion-header>
+<ion-content [class.submenu]="submenus" slots="fixed">
+  <div class="text" [innerHtml]="textContent"></div>
+  <div class="left">
+    <sp-vertical-gallery [images]="images"></sp-vertical-gallery>
+  </div>
+</ion-content>
