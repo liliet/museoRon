@@ -2,8 +2,8 @@
   <sp-menu-page [menus]="menus" [submenus]="submenus"></sp-menu-page>
 </ion-header>
 <ion-content [class.submenu]="submenus" slots="fixed">
-  <div class="text" [innerHtml]="textContent"></div>
-  <div class="left">
+  <div class="text" [innerHtml]="textContent" [style.width.%]="textWidth"></div>
+  <div class="left" [style.width.%]="100 - textWidth">
     <sp-vertical-gallery [images]="images"></sp-vertical-gallery>
   </div>
 </ion-content>
