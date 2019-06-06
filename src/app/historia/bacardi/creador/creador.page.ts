@@ -5,8 +5,7 @@ import { GalleryImage } from 'src/app/global/gallery-image';
 
 @Component({
   selector: 'sp-creador',
-  templateUrl: './creador.page.html',
-  styleUrls: ['./creador.page.scss'],
+  template: '<sp-page-type-one [menus]="menus" [submenus]="submenus" [textWidth]="textWidth" [images]="images" [textContent]="textContent"></sp-page-type-one>'
 })
 export class CreadorPage extends BacardiAppPage implements OnInit {
 

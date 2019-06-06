@@ -5,8 +5,7 @@ import { GalleryImage } from 'src/app/global/gallery-image';
 
 @Component({
   selector: 'sp-santiago',
-  templateUrl: './santiago.page.html',
-  styleUrls: ['./santiago.page.scss'],
+  template: '<sp-page-type-one [menus]="menus" [submenus]="submenus" [textWidth]="textWidth" [images]="images" [textContent]="textContent"></sp-page-type-one>'
 })
 export class SantiagoPage extends BacardiAppPage implements OnInit {
 

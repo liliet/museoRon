@@ -1,0 +1,17 @@
+ion-header{
+    padding: 0 4%;
+}
+ion-content{
+    position: fixed;
+    --padding-top: 4%;
+    top: 10%;
+    height: 88%;
+    --padding-start: 6%;
+    --padding-end: 6%;
+}
+ion-content.submenu{
+    top: 22%;
+    height: 76%;
+    --padding-start: 10%;
+    --padding-end:10%;
+}

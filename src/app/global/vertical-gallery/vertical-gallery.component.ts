@@ -24,15 +24,18 @@ export class VerticalGalleryComponent implements OnInit {
 
   ngOnInit() { }
 
-  openDetail(img: GalleryImage) {
-    let template = `<img src="${img.src}"  fxLayoutAlign="center start" />`;
-    if (img.label) {
-      template = template.concat(`<br /><label>${img.label}</label>`);
+  trackByImage(index: number, img: GalleryImage) {
+    return img.id;
+  }
+
+  openDetail(img: GalleryImage): void {
+    if (!img.templateType) {
+      return;
     }
     this.modalCtrl.create({
       component: ModalComponent,
       componentProps: {
-        content: template
+        img
       },
       keyboardClose: true,
       cssClass: 'modalPage'

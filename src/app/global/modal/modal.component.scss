@@ -1,10 +1,13 @@
 ion-header, ion-content{
     background: rgba(0, 0, 0, .8);
 }
-ion-content{
-    text-align: center;
-}
 #closeModalBtn{
     width: 10em;
     margin: 20px 0;
+}
+ion-content{
+    --padding-start: 4%;
+    --padding-end: 4%;
+    font-family: 'Myriad Pro';
+    font-size: 18px;
 }

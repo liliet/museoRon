@@ -1,0 +1,12 @@
+<ion-slides [options]="sliderOpts" (ionSlideDidChange)="checkIfNavDisabled()" #slides>
+  <ion-slide *ngFor="let img of images; trackBy: trackByImage">
+    <ion-card>
+      <ion-card-header>
+        <img [src]="img.src" fxLayoutAlign="center start" />
+      </ion-card-header>
+      <ion-card-title *ngIf="img.label" color="primary">{{ img.label }}</ion-card-title>
+    </ion-card>
+  </ion-slide>
+</ion-slides>
+<button class="swiper-button-prev" [disabled]="isBegining" (click)="prev()"></button>
+<button class="swiper-button-next" [disabled]="isEnd" (click)="next()"></button>

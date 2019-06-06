@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavParams, ModalController } from '@ionic/angular';
+import { GalleryImage } from '../gallery-image';
 
 @Component({
   selector: 'sp-modal',
@@ -7,15 +8,17 @@ import { NavParams, ModalController } from '@ionic/angular';
   styleUrls: ['./modal.component.scss'],
 })
 export class ModalComponent implements OnInit {
-  content: string;
+  img: GalleryImage;
 
   constructor(
     private navParams: NavParams,
     private modalCtrl: ModalController
   ) { }
 
-  ngOnInit() {
-    this.content = this.navParams.get('content');
+  ngOnInit() { }
+
+  ionViewWillEnter() {
+    this.img = this.navParams.get('img');
   }
 
   closeModal() {

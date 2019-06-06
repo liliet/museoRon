@@ -1,0 +1,43 @@
+ion-card{
+    margin-top: 0;
+}
+ion-card-header{
+    padding: 0;
+}
+ion-card-title{
+    font-family: 'MyriadPro';
+    font-size: 14px;
+    padding-top: 30px;
+}
+.swiper-slide{
+    opacity: .18;
+    margin: auto;
+    ion-card-title{
+        visibility: hidden;
+    }
+}
+.swiper-slide-active{
+    opacity: 1;
+    ion-card-title{
+        visibility: visible;
+    }
+}
+.swiper-button-prev, .swiper-button-next{
+    top: auto;
+    width: 51px;
+    height: 51px;
+}
+.swiper-button-prev{
+    background: url('/assets/icon/prev_icon.svg');
+    left: 15%;
+}
+.swiper-button-prev:disabled{
+    background: url('/assets/icon/prev_icon_disabled.svg');
+}
+.swiper-button-next{
+    background: url('/assets/icon/next_icon.svg');
+    right: 15%;
+}
+.swiper-button-next:disabled{
+    background: url('/assets/icon/next_icon_disabled.svg');
+}

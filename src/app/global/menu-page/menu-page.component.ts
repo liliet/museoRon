@@ -13,6 +13,10 @@ export class MenuPageComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
+
+  trackByMenu(index: number, menu: MenuItem) {
+    return menu.id;
+  }
 
 }

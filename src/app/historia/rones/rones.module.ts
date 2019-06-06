@@ -5,17 +5,14 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { HistoriaPage } from './historia.page';
+import { RonesPage } from './rones.page';
 import { GlobalModule } from 'src/app/global/global.module';
 
 const routes: Routes = [
   {
     path: '',
-    component: HistoriaPage
-  },
-  { path: 'bacardi', loadChildren: './bacardi/bacardi.module#BacardiPageModule' },
-  { path: 'pancho', loadChildren: './pancho/pancho.module#PanchoPageModule' },
-  { path: 'rones', loadChildren: './rones/rones.module#RonesPageModule' }
+    component: RonesPage
+  }
 ];
 
 @NgModule({
@@ -26,6 +23,6 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     GlobalModule
   ],
-  declarations: [HistoriaPage]
+  declarations: [RonesPage]
 })
-export class HistoriaPageModule {}
+export class RonesPageModule {}

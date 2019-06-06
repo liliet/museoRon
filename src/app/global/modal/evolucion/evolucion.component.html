@@ -1,0 +1,13 @@
+<div class="evolucion">
+    <label>Evolución de la Marca</label><br /><br />
+    <ion-slides [options]="sliderOpts">
+        <ion-slide *ngFor="let img of marcas">
+            <ion-card>
+                <ion-card-header>
+                    <img src="{{ basePath }}{{ img.src }}" fxLayoutAlign="center start" />
+                </ion-card-header>
+                <ion-card-title color="primary">{{ img.label }}</ion-card-title>
+            </ion-card>
+        </ion-slide>
+    </ion-slides>
+</div>
