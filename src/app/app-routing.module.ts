@@ -15,6 +15,7 @@ const routes: Routes = [
     path: 'historia',
     loadChildren: './historia/historia.module#HistoriaPageModule'
   },
+  { path: 'obtencion', loadChildren: './obtencion/obtencion.module#ObtencionPageModule' },
 ];
 
 @NgModule({

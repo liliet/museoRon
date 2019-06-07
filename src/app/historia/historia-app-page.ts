@@ -1,10 +1,7 @@
-import { AppPageOne } from '../global/app-page-one';
+import { AppPage } from '../global/app-page';
 import { MenuItem } from '../global/menu-page/menu-item';
 
-export class HistoriaAppPage extends AppPageOne {
-
-    menuSelectId: number;
-    routeBasePath: string;
+export class HistoriaAppPage extends AppPage {
 
     inicialize() {
         this.routeBasePath = '/historia';
@@ -14,8 +11,5 @@ export class HistoriaAppPage extends AppPageOne {
             new MenuItem(3, 'Nave Don Pancho', `${this.routeBasePath}/pancho`),
             new MenuItem(4, 'Rones Antiguos de Cuba', `${this.routeBasePath}/rones`)
         ];
-        const menuSelected = this.menus[this.menuSelectId - 1];
-        menuSelected.selected = true;
-        menuSelected.route = '#';
     }
 }

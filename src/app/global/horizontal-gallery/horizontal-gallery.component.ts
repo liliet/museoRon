@@ -10,20 +10,26 @@ import { IonSlides } from '@ionic/angular';
 export class HorizontalGalleryComponent implements OnInit {
 
   @Input() images: Array<GalleryImage>;
+  @Input() spaceBetween: number;
+  @Input() slidesPerView: number;
+  @Input() likeSteps = false;
   @ViewChild('slides') slides: IonSlides;
+  sliderOpts: any;
   isBegining = true;
   isEnd = false;
 
-  sliderOpts = {
-    zoom: false,
-    spaceBetween: 10,
-    slidesPerView: 3,
-    centeredSlides: true
-  };
+
 
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.sliderOpts = {
+      zoom: false,
+      spaceBetween: (this.spaceBetween) ? this.spaceBetween : 10,
+      slidesPerView: (this.slidesPerView) ? this.slidesPerView : 3,
+      centeredSlides: true
+    };
+  }
 
   trackByImage(index: number, img: GalleryImage) {
     return img.id;

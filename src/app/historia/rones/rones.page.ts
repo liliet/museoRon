@@ -13,8 +13,6 @@ export class RonesPage extends HistoriaAppPage implements OnInit {
     menuCtrl: MenuController
   ) {
     super(menuCtrl);
-    this.menuSelectId = 4;
-    this.inicialize();
    }
 
   ngOnInit() {
@@ -22,6 +20,8 @@ export class RonesPage extends HistoriaAppPage implements OnInit {
 
   inicialize() {
     super.inicialize();
+    this.menuSelectId = 4;
+    this.selectPageMenu();
     this.images = [
       new GalleryImage(1, `assets${this.routeBasePath}/rones/ron1.jpg`, 'Ron Castillo'),
       new GalleryImage(2, `assets${this.routeBasePath}/rones/ron2.jpg`, 'Ron Albuerne y Comp.'),

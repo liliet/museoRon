@@ -4,7 +4,11 @@
       <ion-card-header>
         <img [src]="img.src" fxLayoutAlign="center start" />
       </ion-card-header>
-      <ion-card-title *ngIf="img.label" color="primary">{{ img.label }}</ion-card-title>
+      <ion-card-title *ngIf="!likeSteps && img.label" color="primary">{{ img.label }}</ion-card-title>
+      <ion-card-content *ngIf="likeSteps">
+        <ion-label>0{{ img.id }}</ion-label>
+        <ion-note>{{ img.label }}</ion-note>
+      </ion-card-content>
     </ion-card>
   </ion-slide>
 </ion-slides>

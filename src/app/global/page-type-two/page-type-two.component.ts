@@ -12,6 +12,9 @@ export class PageTypeTwoComponent implements OnInit {
   @Input() menus: Array<MenuItem>;
   @Input() submenus: Array<MenuItem>;
   @Input() images: Array<GalleryImage>;
+  @Input() spaceBetween: number;
+  @Input() slidesPerView: number;
+  @Input() likeSteps: boolean;
 
   constructor() { }
 

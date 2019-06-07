@@ -13,9 +13,11 @@ export class PageTypeOneComponent implements OnInit {
   @Input() submenus: Array<MenuItem>;
   @Input() images: Array<GalleryImage>;
   @Input() textContent: string;
-  @Input() textWidth = 58;
+  @Input() textWidth: number;
 
-  constructor() { }
+  constructor() {
+    this.textWidth = 58;
+   }
 
   ngOnInit() {}
 

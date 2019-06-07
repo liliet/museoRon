@@ -13,9 +13,6 @@ export class BacardiPage extends BacardiAppPage implements OnInit {
     menuCtrl: MenuController
   ) {
     super(menuCtrl);
-    this.menuSelectId = 2;
-    this.submenuSelectId = 1;
-    this.inicialize();
   }
 
   ngOnInit() {
@@ -23,6 +20,8 @@ export class BacardiPage extends BacardiAppPage implements OnInit {
 
   inicialize() {
     super.inicialize();
+    this.submenuSelectId = 1;
+    this.selectPageMenu();
     this.images = [
       new GalleryImage(1, `assets${this.routeBasePath}/marca-1862.png`, ''),
       new GalleryImage(2, `assets${this.routeBasePath}/evolucion.png`, 'Evolución de la marca', 'evolución')

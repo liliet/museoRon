@@ -3,10 +3,9 @@ import { MenuItem } from 'src/app/global/menu-page/menu-item';
 
 export class BacardiAppPage extends HistoriaAppPage {
 
-    submenuSelectId: number;
-
     inicialize(){
         super.inicialize();
+        this.menuSelectId = 2;
         this.textWidth = 68;
         this.routeBasePath = `${this.routeBasePath}/bacardi`;
         this.submenus = [
@@ -14,8 +13,5 @@ export class BacardiAppPage extends HistoriaAppPage {
             new MenuItem(2, 'Su creador', `${this.routeBasePath}/creador`),
             new MenuItem(3, 'Santiago y Los Bacardí', `${this.routeBasePath}/santiago`)
         ];
-        const submenuSelected = this.submenus[this.submenuSelectId - 1];
-        submenuSelected.selected = true;
-        submenuSelected.route = '#';
     }
 }

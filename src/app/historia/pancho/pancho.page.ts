@@ -13,8 +13,6 @@ export class PanchoPage extends HistoriaAppPage implements OnInit {
     menuCtrl: MenuController
   ) {
     super(menuCtrl);
-    this.menuSelectId = 3;
-    this.inicialize();
 
    }
 
@@ -23,6 +21,8 @@ export class PanchoPage extends HistoriaAppPage implements OnInit {
 
   inicialize() {
     super.inicialize();
+    this.menuSelectId = 3;
+    this.selectPageMenu();
     this.textWidth = 68;
     this.images = [
       new GalleryImage(1, `assets${this.routeBasePath}/pancho1.jpg`, 'Nave Don Pancho'),

@@ -13,9 +13,6 @@ export class SantiagoPage extends BacardiAppPage implements OnInit {
     menuCtrl: MenuController
   ) {
     super(menuCtrl);
-    this.menuSelectId = 2;
-    this.submenuSelectId = 3;
-    this.inicialize();
   }
 
   ngOnInit() {
@@ -23,6 +20,8 @@ export class SantiagoPage extends BacardiAppPage implements OnInit {
 
   inicialize() {
     super.inicialize();
+    this.submenuSelectId = 3;
+    this.selectPageMenu();
     this.images = [
       new GalleryImage(1, `assets${this.routeBasePath}/santiago1.jpg`),
       new GalleryImage(2, `assets${this.routeBasePath}/santiago2.jpg`),

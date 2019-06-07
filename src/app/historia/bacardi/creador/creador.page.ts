@@ -13,9 +13,6 @@ export class CreadorPage extends BacardiAppPage implements OnInit {
     menuCtrl: MenuController
   ) {
     super(menuCtrl);
-    this.menuSelectId = 2;
-    this.submenuSelectId = 2;
-    this.inicialize();
   }
 
   ngOnInit() {
@@ -23,6 +20,8 @@ export class CreadorPage extends BacardiAppPage implements OnInit {
 
   inicialize() {
     super.inicialize();
+    this.submenuSelectId = 2;
+    this.selectPageMenu();
     this.images = [
       new GalleryImage(1, `assets${this.routeBasePath}/facundo.jpg`, 'Facundo Bacardí Masó')
     ];

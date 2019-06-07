@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuController } from '@ionic/angular';
 import { GalleryImage } from 'src/app/global/gallery-image';
 import { HistoriaAppPage } from './historia-app-page';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'sp-historia',
@@ -13,8 +13,6 @@ export class HistoriaPage extends HistoriaAppPage implements OnInit {
     menuCtrl: MenuController
   ) {
     super(menuCtrl);
-    this.menuSelectId = 1;
-    this.inicialize();
   }
 
   ngOnInit() {
@@ -22,6 +20,8 @@ export class HistoriaPage extends HistoriaAppPage implements OnInit {
 
   inicialize() {
     super.inicialize();
+    this.menuSelectId = 1;
+    this.selectPageMenu();
     this.images = [
       new GalleryImage(1, `assets${this.routeBasePath}/mapa.png`, 'Ruta de la caña de azúcar', 'zoom'),
       new GalleryImage(2, `assets${this.routeBasePath}/historia1.jpg`, 'Cunyanya', 'zoom'),
