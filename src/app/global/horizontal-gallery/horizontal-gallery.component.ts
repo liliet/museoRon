@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { GalleryImage } from '../gallery-image';
-import { IonSlides } from '@ionic/angular';
+import { IonSlides, ModalController } from '@ionic/angular';
+import { ModalComponent } from '../modal/modal.component';
 
 @Component({
   selector: 'sp-horizontal-gallery',
@@ -20,7 +21,9 @@ export class HorizontalGalleryComponent implements OnInit {
 
 
 
-  constructor() { }
+  constructor(
+    private modalCtrl: ModalController
+  ) { }
 
   ngOnInit() {
     this.sliderOpts = {
@@ -49,6 +52,22 @@ export class HorizontalGalleryComponent implements OnInit {
     });
     this.slides.isEnd().then((istrue) => {
       this.isEnd = istrue;
+    });
+  }
+
+  openDetail(img: GalleryImage): void {
+    if (!img.templateType) {
+      return;
+    }
+    this.modalCtrl.create({
+      component: ModalComponent,
+      componentProps: {
+        img
+      },
+      keyboardClose: true,
+      cssClass: 'modalPage'
+    }).then(modal => {
+      modal.present();
     });
   }
 

@@ -3,6 +3,7 @@ export class GalleryImage {
         public id: number,
         public src: string,
         public label = '',
-        public templateType: '' | 'zoom' | 'evolución' | 'alambique' = ''
+        public templateType: '' | 'zoom' | 'evolución' | 'alambique' | 'biografia' = '',
+        public description = ''
     ) {}
 }

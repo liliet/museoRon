@@ -11,6 +11,7 @@ import { EvolucionComponent } from './modal/evolucion/evolucion.component';
 import { PageTypeTwoComponent } from './page-type-two/page-type-two.component';
 import { HorizontalGalleryComponent } from './horizontal-gallery/horizontal-gallery.component';
 import { AlambiqueComponent } from './modal/alambique/alambique.component';
+import { BiografiaComponent } from './modal/biografia/biografia.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { AlambiqueComponent } from './modal/alambique/alambique.component';
     ZoomComponent,
     EvolucionComponent,
     AlambiqueComponent,
+    BiografiaComponent,
     HorizontalGalleryComponent,
     PageTypeTwoComponent
   ],
