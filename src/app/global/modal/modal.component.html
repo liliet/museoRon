@@ -8,6 +8,7 @@
   </ion-toolbar>
 </ion-header>
 <ion-content class="content" [ngSwitch]="img?.templateType">
+  <sp-alambique *ngSwitchCase="'alambique'"></sp-alambique>
   <sp-evolucion *ngSwitchCase="'evolución'"></sp-evolucion>
   <sp-zoom *ngSwitchDefault [img]="img"></sp-zoom>
 </ion-content>

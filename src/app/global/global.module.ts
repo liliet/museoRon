@@ -10,6 +10,7 @@ import { ZoomComponent } from './modal/zoom.component';
 import { EvolucionComponent } from './modal/evolucion/evolucion.component';
 import { PageTypeTwoComponent } from './page-type-two/page-type-two.component';
 import { HorizontalGalleryComponent } from './horizontal-gallery/horizontal-gallery.component';
+import { AlambiqueComponent } from './modal/alambique/alambique.component';
 
 @NgModule({
   declarations: [
@@ -19,11 +20,12 @@ import { HorizontalGalleryComponent } from './horizontal-gallery/horizontal-gall
     PageTypeOneComponent,
     ZoomComponent,
     EvolucionComponent,
+    AlambiqueComponent,
     HorizontalGalleryComponent,
     PageTypeTwoComponent
   ],
   imports: [
-    CommonModule,
+  CommonModule,
     IonicModule,
     RouterModule
   ],

@@ -14,7 +14,7 @@ const routes: Routes = [
     component: BacardiPage
   },
   { path: 'creador', loadChildren: './creador/creador.module#CreadorPageModule' },
-  { path: 'santiago', loadChildren: './santiago/santiago.module#SantiagoPageModule' }
+  { path: 'santiago', loadChildren: '../bacardi/santiago/santiago.module#SantiagoPageModule' }
 ];
 
 @NgModule({

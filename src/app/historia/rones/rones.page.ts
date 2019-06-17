@@ -26,7 +26,12 @@ export class RonesPage extends HistoriaAppPage implements OnInit {
       new GalleryImage(1, `assets${this.routeBasePath}/rones/ron1.jpg`, 'Ron Castillo'),
       new GalleryImage(2, `assets${this.routeBasePath}/rones/ron2.jpg`, 'Ron Albuerne y Comp.'),
       new GalleryImage(3, `assets${this.routeBasePath}/rones/ron3.jpg`, 'Ron Elixir-Cordial Bacardi'),
-      new GalleryImage(4, `assets${this.routeBasePath}/rones/ron4.jpg`, 'Ron Castillo')
+      new GalleryImage(4, `assets${this.routeBasePath}/rones/ron4.jpg`, 'Ron Rovira Cordon Rojo'),
+      new GalleryImage(5, `assets${this.routeBasePath}/rones/ron5.jpg`, 'Ron Camp'),
+      new GalleryImage(6, `assets${this.routeBasePath}/rones/ron6.jpg`, 'Ron Caney'),
+      new GalleryImage(7, `assets${this.routeBasePath}/rones/ron7.jpg`, 'Ron Caña de Linares'),
+      new GalleryImage(8, `assets${this.routeBasePath}/rones/ron8.jpg`, 'Ron Matusalem'),
+      new GalleryImage(9, `assets${this.routeBasePath}/rones/ron9.jpg`, 'Ron Havana Club')
     ];
   }
 

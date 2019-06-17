@@ -4,6 +4,7 @@ ion-toolbar ion-button.md.button.button-large {
 }
 div.menu-btn{
     display: flex;
+    --color: var(--ion-color-tertiary);
 }
 div.menu-btn:first-child > ion-button.md.button.button-large{
     --padding-start: 0;
@@ -17,7 +18,7 @@ div.selected, ion-icon.selected {
 ion-toolbar.submenu{
     padding: 0 4%;
     ion-buttons{
-        border-bottom: 0.5mm #473513 solid;
+        border-bottom: 0.1mm solid var(--ion-color-secondary);
         ion-item{
             --border-color: transparent;
             --padding-start: 0;
@@ -30,9 +31,9 @@ ion-toolbar.submenu{
             --padding-end: 0;
         }
         ion-item.selected{
-            border-bottom: 2px var(--ion-color-primary) solid;
+            border-bottom: 2px solid var(--ion-color-secondary);
             ion-button.md.button.button-large{
-                color: var(--ion-color-primary);
+                color: var(--ion-color-secondary);
             }
         }
         ion-button.md.button.button-large {

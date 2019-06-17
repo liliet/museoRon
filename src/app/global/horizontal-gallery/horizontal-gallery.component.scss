@@ -6,19 +6,21 @@ ion-card-header{
     padding: 0;
 }
 ion-card-title{
-    font-family: 'MyriadPro';
+    font-family: 'Myriad Pro';
     font-size: 14px;
     padding-top: 30px;
+    color: var(--ion-color-h2);
 }
 ion-card-content{
     padding: 0;
     margin-top: 8%;
-    width: calc(100% + 75px);
-    text-align: left;
+    width: calc(100% + 100px);
+    left: -50px;
+    text-align: justify;
     ion-label{
         font-size: 23px;
         font-weight: bolder;
-        color: var(--ion-color-primary);
+        color: var(--ion-color-galstep);
         position: absolute;
         left: -55px;
         background: url('/assets/icon/step.png');
@@ -30,7 +32,7 @@ ion-card-content{
     ion-note{
         font-family: 'Calibri';
         font-size: 16px;
-        color: var(--ion-color-secondary);
+        color: var(--ion-color-galhor);
     }
 }
 .swiper-slide{

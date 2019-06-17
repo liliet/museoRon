@@ -10,25 +10,29 @@ ion-content{
     div.text{
         font-family: 'Calibri';
         font-size: 15px;
-        color: var(--ion-color-secondary);
-        height: 100%;
+        color: var(--ion-text-color);
         float: left;
-        overflow: auto;
+        /* height: 100%;
+        overflow: auto; */
         text-align: justify;
     }
     div.left{
-        height: 100%;
         float: right;
-        overflow: auto;
+        /* height: 100%;
+        overflow: auto; */
         padding: 0 2%;
     }
 }
 ion-content.submenu{
-    top: 22%;
+    top: 20%;
     height: 76%;
     --padding-start: 8%;
     --padding-end:8%;
     div.text{
         font-size: 14px;
+        th, td {
+            border: 0.1mm solid var(--ion-color-medium-shade);
+            padding: 5px;
+        }
     }
 }

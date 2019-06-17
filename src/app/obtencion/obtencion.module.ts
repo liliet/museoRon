@@ -13,7 +13,10 @@ const routes: Routes = [
     path: '',
     component: ObtencionPage
   },
-  { path: 'aguardiente', loadChildren: './aguardiente/aguardiente.module#AguardientePageModule' }
+  { path: 'aguardiente', loadChildren: './aguardiente/aguardiente.module#AguardientePageModule' },
+  { path: 'alambique', loadChildren: './alambique/alambique.module#AlambiquePageModule' },
+  { path: 'toneleria', loadChildren: './toneleria/toneleria.module#ToneleriaPageModule' },
+  { path: 'denominacion', loadChildren: './denominacion/denominacion.module#DenominacionPageModule' }
 ];
 
 @NgModule({

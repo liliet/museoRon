@@ -13,9 +13,13 @@ const routes: Routes = [
   },
   {
     path: 'historia',
-    loadChildren: './historia/historia.module#HistoriaPageModule'
+    loadChildren: '../app/historia/historia.module#HistoriaPageModule'
   },
   { path: 'obtencion', loadChildren: './obtencion/obtencion.module#ObtencionPageModule' },
+  { path: 'personalidades', loadChildren: './personalidades/personalidades.module#PersonalidadesPageModule' },
+  { path: 'roneras', loadChildren: './roneras/roneras.module#RonerasPageModule' },
+  { path: 'galeria', loadChildren: './galeria/galeria.module#GaleriaPageModule' },
+  { path: 'conferencias', loadChildren: './conferencias/conferencias.module#ConferenciasPageModule' },
 ];
 
 @NgModule({
