@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MenuController } from '@ionic/angular';
+import { MenuController, Platform } from '@ionic/angular';
 
 @Component({
   selector: 'sp-home',
@@ -7,11 +7,20 @@ import { MenuController } from '@ionic/angular';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  subscription: any;
   constructor(
-    private menuCtrl: MenuController
+    private menuCtrl: MenuController,
+    private platform: Platform
   ) { }
 
   ionViewWillEnter() {
     this.menuCtrl.enable(false);
+  }
+
+  ionViewDidEnter() {
+    this.subscription = this.platform.backButton.subscribe(() => {
+// tslint:disable-next-line: no-string-literal
+      navigator['app'].exitApp();
+    });
   }
 }
