@@ -1,15 +1,33 @@
 import { Component, OnInit } from '@angular/core';
+import { RonerasAppPage } from '../roneras-app-page';
+import { MenuController } from '@ionic/angular';
+import { GalleryImage } from 'src/app/global/gallery-image';
 
 @Component({
   selector: 'sp-santiago',
-  templateUrl: './santiago.page.html',
-  styleUrls: ['./santiago.page.scss'],
+  template: '<sp-page-type-one [menus]="menus" [textWidth]="textWidth" [images]="images" [textContent]="textContent"></sp-page-type-one>'
 })
-export class SantiagoPage implements OnInit {
+export class SantiagoPage extends RonerasAppPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    menuCtrl: MenuController
+  ) {
+    super(menuCtrl);
+  }
 
   ngOnInit() {
+  }
+
+  inicialize() {
+    super.inicialize();
+    this.menuSelectId = 4;
+    this.selectPageMenu();
+    this.images = [
+      new GalleryImage(1, `assets/${this.routeBasePath}/santiago_cuba.jpg`, '')
+    ];
+    this.textWidth = 68;
+    // tslint:disable-next-line: max-line-length
+    this.textContent = `<h1>Ronera Santiago de Cuba: cuna del Ron Ligero</h1><p>Se destaca de esta Ronera, entre sus bodegas, la Nave Don Pancho, ubicada tan cerca de las líneas del ferrocarril, que cuenta la leyenda que los barriles se estremecen a su paso, y esto influye en el proceso de añejamiento de la bebida. La Nave, perfectamente conservada, es orgullo de sus trabajadores que mantienen en uso barriles de más de 60 años, los que junto a todo un ejército de otros nuevos, aportan sus cualidades a nuestros rones y son la garantía de estas producciones.</p><p>Está ubicada en la calle Peralejo No. 103, entre San Antonio y San Ricardo, Santiago de Cuba. Presenta en su composición a 277 trabajadores que trabajan en tres turnos en la destilería y un turno fijo en la ronera.</p><p>Se caracterizan por fabricar y producir varios tipos de ron para la exportación y para la red nacional. A partir del 2002 comenzaron a producir alcohol y aguardiente en la destilería. El área de la empresa es de 16 430 m2.</p><p>La Ronera de Santiago de Cuba es productora de Ron Ligero de las marcas Santiago de Cuba, Varadero, Caney, entre otras, las cuales gozan de gran prestigio en Cuba y en el mundo, depositaria de las más fieles tradiciones de la cultura ronera cubana, como parte enriquecedora e inseparable de la cultura nacional. Esta afirmación es demostrable por poseer la más antigua fábrica del país (reconocida como cuna del ron ligero), fundada el 4 de febrero de 1862 y contar con un equipo de Maestros Roneros altamente calificados, que han mantenido la cultura y tradición del ron ligero cubano.</p><p>Las marcas que se producen en la Ronera Santiago de Cuba se identifican y distinguen en el mercado por su elevada calidad, determinada por la selección del aguardiente, por las mezclas sucesivas de las bases añejas y del añejamiento tradicional y natural en barriles de roble blanco.</p><p>Cuenta con Naves para el añejamiento que le permite disponer de una gama de productos con una graduación alcohólica que oscila de 38 a 40 por ciento de alcohol en volumen que incluye los rones Carta Blanca hasta los Extra Añejos con posibilidades de desarrollar otros productos.</p><p>Los elementos naturales presentes en la región de Santiago de Cuba, su tierra de montañas, bañadas e iluminadas por el sol del Caribe, permiten a esta Ronera, junto a su forma tradicional “modo de hacer” (know how) ron heredado de generación en generación, aspirar a la denominación de origen.</p><p>Para el Aseguramiento de la Calidad de las producciones de la Ronera Santiago de Cuba se cuenta con un Sistema Certificado de Gestión de la Inocuidad Basado en el Análisis de Peligros y Puntos Críticos de Control  y orientado a satisfacer las exigencias de los clientes a la vez que propicia un desarrollo sostenible junto a mejores y más seguras condiciones para el trabajador, así como cuenta con un Sistema de Gestión de la Calidad del Laboratorio de la UEB Ronera, según requisitos de la Norma ISO/IEC 17025:2006.</p><p>Su Misión es “Producir y comercializar rones, aguardientes y alcoholes con los más altos estándares de calidad, que satisfagan las demandas de los clientes, combinando un alto desempeño de los recursos humanos y un respeto adecuado al medio ambiente y la tecnología, con la tradición del mejor ron cubano.”</p><p>Cuenta con tres UEB Productoras:<ul><li>UEB Destilería, destinada a la producción de Alcoholes tanto para el consumo interno en la producción de nuestros rones como para la venta a las Empresas de Bebidas del Territorio.</li><li>UEB Ronera, destinada a la producción de Rones Embotellados para el Mercado Nacional y el Mercado Captador de Divisas, así como la producción de Caldos Corporativos.</li><li>UEB Añejamiento y Tonelería, destinada a la producción de Caldos Nacionales para las UBR del territorio y se encarga además del añejamiento de todas las bases añejas tanto de rones como aguardientes. Se destaca de esta UEB, entre sus bodegas la Nave Don Pancho.</li></ul></p><p>También cuenta con 2 unidades que se dedican a la comercialización de los productos de la Corporación, las cuales radican en Santiago de Cuba y Holguín, la variedad de rones Santiago de Cuba, la variedad de rones y licores Cubay producidos en la Ronera Central de Las Villas, la Guayabita del Pinar producida en Pinar del Río, el Aguardiente Sao Can de Cárdenas y los vinos Soroa de las Bodegas San Cristóbal.</p><p>A su carpeta de productos, Cuba Ron Ronera Santiago de Cuba, incorpora marcas como signos distintivos de rones ligeros, los cuales han sido creados fieles a las más ricas tradiciones de producción del ron cubano y donde se unen la cultura más acabada de producción con las técnicas más modernas. Esta unión, junto a la garantía de disponer de la materia prima fundamental que son las mieles de caña de azúcar cubana y una cultura desarrollada y defendida como patrimonio propio por nuestros maestros roneros, hace el proceso irrepetible en cualquier otro lugar del mundo.</p><p>El Ron Santiago de Cuba se produce en origen por la Corporación Cuba Ron S.A, y en ocasiones especiales se suelen producir especialidades de esta marca para celebrar fechas conmemorativas de la misma ciudad, mención especial que recibe el Ron Extra Añejo Santiago de Cuba, diseñado para homenajear la Fundación de la Villa de Santiago de Cuba.</p><p>Principales Destinos y Clientes de nuestras producciones:</p><p>Corporación CIMEX.  Cliente único autorizado para la exportación y/o comercialización de las Marcas Embotelladas Varadero y Caney, estos son:<ul><li>	Ron Varadero: 3 Años, 5 Años, 7 Años, Añejo, Silver Dry y Supremo.</li><li> Ron Caney: Carta Blanca Superior, Oro Ligero y Centuria.</li><li>	Ron XXX Aniversario CIMEX.</li></ul>Cuba Ron S.A. es además comercializador y exportador de todas las Marcas de Rones Embotellados<ul><il> Ron Santiago de Cuba: Carta Blanca, Añejo, Añejo Superior 11 Años, Extra Añejo 20 Años y Extra Añejo 25 Años.</li><li>	Ron Edmundo Dantés 15 Años.</li></ul>Havana Club Internacional.<ul><li> Ron Havana Club Añejo 15 Años Gran Reserva.</li></ul>Empresa de Bebidas y Refrescos. Cliente comercializador de Rones Embotellados con destino al mercado nacional.<ul><li> Ron Refino Caribe.</li><li> Ron Palma Caribe.</li><li> Ron Carta Blanca Santiago.</li></u></p>`;
   }
 
 }

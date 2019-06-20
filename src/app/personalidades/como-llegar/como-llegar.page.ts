@@ -5,7 +5,7 @@ import { GalleryImage } from 'src/app/global/gallery-image';
 
 @Component({
   selector: 'sp-como-llegar',
-  template: '<sp-page-type-one [menus]="menus" [submenus]="submenus" [textWidth]="textWidth" [images]="images" [textContent]="textContent"></sp-page-type-one>'
+  template: '<sp-page-type-one [menus]="menus" [textWidth]="textWidth" [images]="images" [textContent]="textContent"></sp-page-type-one>'
 })
 export class ComoLlegarPage extends PersonalidadesAppPage implements OnInit {
 
