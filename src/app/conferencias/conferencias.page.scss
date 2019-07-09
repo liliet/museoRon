@@ -1,0 +1,29 @@
+ion-content{
+    display: flex;
+    top: 7%;
+    --padding-start: 8%;
+    --padding-end: 8%;
+}
+ion-item{
+    margin: 1%;
+    width: 20%;
+    max-height: 170px;
+    height: 25%;
+    display: inline-block;
+    --padding-start: 0;
+    --padding-end: 0;
+    img{
+        width: auto !important;
+        object-fit: contain;
+    }
+    ion-label{
+        font-family: Calibri Bold;
+        font-size: 50%;
+        font-weight: bold;
+        color: black;
+        position: absolute;
+        bottom: 0;
+        margin: 5%;
+        text-align: center;
+    }
+}

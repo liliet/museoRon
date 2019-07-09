@@ -10,13 +10,13 @@ import { GlobalModule } from '../global/global.module';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'central',
     component: RonerasPage
   },
   { path: 'cardenas', loadChildren: './cardenas/cardenas.module#CardenasPageModule' },
   { path: 'santa-cruz', loadChildren: './santa-cruz/santa-cruz.module#SantaCruzPageModule' },
   { path: 'santiago', loadChildren: '../roneras/santiago/santiago.module#SantiagoPageModule' },
-  { path: 'cubaron', loadChildren: './cubaron/cubaron.module#CubaronPageModule' }
+  { path: '', loadChildren: './cubaron/cubaron.module#CubaronPageModule' }
 ];
 
 @NgModule({

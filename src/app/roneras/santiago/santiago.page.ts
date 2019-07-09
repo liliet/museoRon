@@ -20,7 +20,7 @@ export class SantiagoPage extends RonerasAppPage implements OnInit {
 
   inicialize() {
     super.inicialize();
-    this.menuSelectId = 4;
+    this.menuSelectId = 5;
     this.selectPageMenu();
     this.images = [
       new GalleryImage(1, `assets/${this.routeBasePath}/santiago_cuba.jpg`, '')

@@ -6,6 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { ConferenciasPage } from './conferencias.page';
+import { File } from '@ionic-native/file/ngx';
+import { FileOpener } from '@ionic-native/file-opener/ngx';
 
 const routes: Routes = [
   {
@@ -21,6 +23,10 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [ConferenciasPage]
+  declarations: [ConferenciasPage],
+  providers: [
+    File,
+    FileOpener
+  ]
 })
 export class ConferenciasPageModule {}

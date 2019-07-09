@@ -1,9 +1,6 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>conferencias</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
+  <ion-item *ngFor="let f of files" (click)="open(f.file, f.ext)">
+    <img [src]="buttons[f.ext]" />
+    <ion-label text-wrap class="ion-text-uppercase">{{ f.name }}</ion-label>
+  </ion-item>
 </ion-content>
