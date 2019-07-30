@@ -1,16 +1,15 @@
+ion-toolbar{
+    --min-height: 8%;
+}
 ion-toolbar ion-button.md.button.button-large {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
+  --padding-start: 0;
+  --padding-end: 0;
 }
 div.menu-btn{
     display: flex;
     --color: var(--ion-color-tertiary);
-}
-div.menu-btn:first-child > ion-button.md.button.button-large{
-    --padding-start: 0;
-}
-div.menu-btn:last-child > ion-button.md.button.button-large{
-    --padding-end: 0;
 }
 div.selected, ion-icon.selected {
     color: var(--ion-color-primary);

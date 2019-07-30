@@ -1,0 +1,40 @@
+ion-header{
+    padding: 0 4%;
+}
+ion-content{
+    position: fixed;
+    --padding-top: 2%;
+    top: 8%;
+    height: 88%;
+    --padding-start: 8%;
+    --padding-end: 8%;
+    .images{
+        column-gap: 0;
+        column-fill: auto;
+        .one-image {
+            margin: 2px;
+            text-align: center;
+        }
+    }
+}
+ion-content.submenu{
+    top: 18%;
+    height: 76%;
+    --padding-start: 10%;
+    --padding-end:10%;
+}
+@media (min-width: 0px) {
+    .images {
+        column-count: 2;
+    }
+}
+@media (min-width: 576px) {
+    .images {
+        column-count: 3;
+    }
+}
+@media (min-width: 992px) {
+    .images {
+        column-count: 4;
+    }
+}

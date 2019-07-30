@@ -1,6 +1,14 @@
 <ion-content>
-  <ion-item *ngFor="let f of files" (click)="open(f.file, f.ext)">
-    <img [src]="buttons[f.ext]" />
-    <ion-label text-wrap class="ion-text-uppercase">{{ f.name }}</ion-label>
-  </ion-item>
+  <div class="items">
+    <ion-card *ngFor="let f of files" (click)="open(f.file, f.ext)">
+      <ion-card-header>
+        <img [src]="buttons[f.ext]" fxLayoutAlign="center start" />
+      </ion-card-header>
+      <ion-card-title class="ion-text-uppercase">{{ f.name }}</ion-card-title>
+    </ion-card>
+    <!-- <ion-item type="button" *ngFor="let f of files" (click)="open(f.file, f.ext)">
+      <img [src]="buttons[f.ext]" fxLayoutAlign="center start" />
+      <ion-label text-wrap class="ion-text-uppercase">{{ f.name }}</ion-label>
+    </ion-item>-->
+  </div>
 </ion-content>

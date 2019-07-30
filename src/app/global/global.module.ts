@@ -12,6 +12,7 @@ import { PageTypeTwoComponent } from './page-type-two/page-type-two.component';
 import { HorizontalGalleryComponent } from './horizontal-gallery/horizontal-gallery.component';
 import { AlambiqueComponent } from './modal/alambique/alambique.component';
 import { BiografiaComponent } from './modal/biografia/biografia.component';
+import { PageTypeThreeComponent } from './page-type-three/page-type-three.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { BiografiaComponent } from './modal/biografia/biografia.component';
     AlambiqueComponent,
     BiografiaComponent,
     HorizontalGalleryComponent,
-    PageTypeTwoComponent
+    PageTypeTwoComponent,
+    PageTypeThreeComponent
   ],
   imports: [
   CommonModule,
@@ -36,7 +38,8 @@ import { BiografiaComponent } from './modal/biografia/biografia.component';
     MenuPageComponent,
     PageTypeOneComponent,
     HorizontalGalleryComponent,
-    PageTypeTwoComponent
+    PageTypeTwoComponent,
+    PageTypeThreeComponent
   ],
   entryComponents: [
     ModalComponent

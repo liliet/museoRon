@@ -3,27 +3,60 @@ ion-content{
     top: 7%;
     --padding-start: 8%;
     --padding-end: 8%;
-}
-ion-item{
-    margin: 1%;
-    width: 20%;
-    max-height: 170px;
-    height: 25%;
-    display: inline-block;
-    --padding-start: 0;
-    --padding-end: 0;
-    img{
-        width: auto !important;
-        object-fit: contain;
+    .items{
+        padding: 0;
+        column-gap: 8px;
+        ion-card {
+            text-align: center;
+            border-radius: 0;
+            margin: 0 0 8px 0;
+            ion-card-header{
+                padding: 0;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            ion-card-title{
+                font-family: Calibri Bold;
+                font-size: 65%;
+                font-weight: bold;
+                color: black;
+                width: 100%;
+                height: 35%;
+                margin: 0;
+                padding: 10% 5%;
+                text-align: center;
+                position: absolute;
+                bottom: 0;
+                text-overflow: ellipsis;
+            }
+        }
     }
-    ion-label{
-        font-family: Calibri Bold;
-        font-size: 50%;
-        font-weight: bold;
-        color: black;
-        position: absolute;
-        bottom: 0;
-        margin: 5%;
-        text-align: center;
+}
+@media (min-width: 0px) {
+    .items {
+        column-count: 2;
+    }
+}
+@media (min-width: 450px) {
+    .items {
+        column-count: 3;
+    }
+}
+@media (min-width: 576px) {
+    .items {
+        column-count: 4;
+    }
+}
+@media (min-width: 768px) {
+    .items {
+        column-count: 5;
+    }
+}
+@media (min-width: 992px) {
+    .items {
+        column-count: 6;
     }
 }

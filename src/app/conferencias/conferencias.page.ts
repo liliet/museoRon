@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuController, Platform } from '@ionic/angular';
+import { MenuController } from '@ionic/angular';
 import { FileOpener } from '@ionic-native/file-opener/ngx';
-import { File } from '@ionic-native/file/ngx';
 
 @Component({
   selector: 'sp-conferencias',
@@ -42,20 +41,16 @@ export class ConferenciasPage implements OnInit {
 
   constructor(
     private menuCtrl: MenuController,
-    private fileNavigator: File,
-    private platform: Platform,
     private fileOpener: FileOpener
   ) {
     const basePath = 'assets/conferencias/';
     this.files = [
-      { file: `${basePath}Conferencia de la Dra Olga Portuondo.doc`, ext: 'doc', name: 'Conferencia de la Dra Olga Portuondo' },
+      { file: `${basePath}Conferencia de la Dra Olga Portuondo.pdf`, ext: 'pdf', name: 'Conferencia de la Dra Olga Portuondo' },
       { file: `${basePath}Don Arturo (doc prensa).pdf`, ext: 'pdf', name: 'Don Arturo (doc prensa)' },
-      { file: `${basePath}Clinical_Training_BBC.pptx`, ext: 'pptx', name: 'Clinical_Training_BBC' }
+      { file: `${basePath}Acerca de los maestros roneros.pdf`, ext: 'pdf', name: 'Acerca de los maestros roneros del lado oscuro de la luna' },
+      { file: `${basePath}El ingenio del mambí.pdf`, ext: 'pdf', name: 'El ingenio del mambí' },
+      { file: `${basePath}Historia y procesos sobre el  ron.pdf`, ext: 'pdf', name: 'Historia y procesos sobre el  ron' }
     ];
-  }
-
-  handleError(error: any) {
-    console.log('Ha ocurrido un error: ', error);
   }
 
   ionViewWillEnter() {
@@ -63,41 +58,6 @@ export class ConferenciasPage implements OnInit {
   }
 
   ngOnInit() {
-    this.platform.ready()
-      .then((readySource) => {
-        console.log(`Platform ready: ${readySource}`);
-        console.log(this.fileNavigator);
-        /* const basePath = `${(this.fileNavigator.applicationDirectory == null) ? '' : this.fileNavigator.applicationDirectory}www/assets/conferencias`;
-        console.log(basePath);
-        (window as any).resolveLocalFileSystemURL(basePath,
-          (fileSystem: DirectoryEntry) => {
-            console.log(fileSystem);
-            const reader = fileSystem.createReader();
-            reader.readEntries(
-              (entries) => {
-                console.log(entries);
-                let fileExt = '';
-                entries.forEach(entry => {
-                  fileExt = entry.name.split('.').reverse[0];
-                  this.files.push({ file: entry.name, ext: fileExt.toLowerCase() });
-                });
-              },
-              this.handleError);
-          } ,
-        this.handleError ); */
-
-        /* this.fileNavigator.listDir(basePath, '')
-          .then(entries => {
-            console.log(entries);
-            let fileExt = '';
-            entries.forEach(entry => {
-              fileExt = entry.name.split('.').reverse[0];
-              this.files.push({ file: entry.name, ext: fileExt.toLowerCase() });
-            });
-          })
-          .catch(this.handleError); */
-      })
-      .catch(this.handleError);
   }
 
   open(file: string, ext: string) {
