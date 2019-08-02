@@ -8,8 +8,6 @@
 </ion-toolbar>
 <ion-toolbar *ngIf="submenus" class="submenu">
   <ion-buttons>
-    <ion-item *ngFor="let item of submenus; trackBy: trackByMenu" [class.selected]="item.selected">
-      <ion-button size="large" [routerLink]="[item.route]">{{ item.text }}</ion-button>
-    </ion-item>
+    <ion-button *ngFor="let item of submenus; trackBy: trackByMenu" [class.selected]="item.selected" size="large" [routerLink]="[item.route]">{{ item.text }}</ion-button>
   </ion-buttons>
 </ion-toolbar>

@@ -21,10 +21,9 @@ ion-header{
         }
     }
     ion-menu-button{
+        width: calc(48px + (92 - 48)*((100vw - 800px) / (2560 - 800)));
         ion-icon{
-            font-size: calc(28px + (92 - 28)*((100vw - 800px) / (2560 - 800)));
-            width: 1em;
-            height: 1em;
+            font-size: calc(48px + (92 - 48)*((100vw - 800px) / (2560 - 800)));
         }
     }
 }
@@ -39,7 +38,11 @@ ion-menu ion-button {
   text-transform: uppercase;
 }
 #closeMenuBtn {
-    width: 10em;
+    width: auto;
+    height: auto;
+    ion-icon{
+        font-size: calc(48px + (92 - 48)*((100vw - 800px) / (2560 - 800)));
+    }
 }
 ion-router-outlet {
     top: 17vh;

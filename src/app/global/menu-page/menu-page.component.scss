@@ -1,17 +1,18 @@
 ion-toolbar{
     height: 6vh;
+    --min-height: 6vh;
     ion-buttons{
-        position: absolute;
-        top: 0;
         height: 6vh;
+        width: fit-content;
+        margin: auto;
     }
 }
 ion-toolbar ion-button.md.button.button-large {
   font-weight: bold;
   font-size: 1em;
   height: auto;
-  --padding-start: 0;
-  --padding-end: 0;
+  --padding-start: calc(0px + (20 - 0)*((100vw - 800px) / (2560 - 800)));
+  --padding-end: calc(0px + (20 - 0)*((100vw - 800px) / (2560 - 800)));
 }
 div.menu-btn{
     display: flex;
@@ -24,32 +25,32 @@ div.menu-btn{
 div.selected, ion-icon.selected {
     color: var(--ion-color-primary);
 }
+.item {
+    min-height: 1rem;
+}
 ion-toolbar.submenu{
-    padding: 0 4%;
+    margin: 0 auto;
+    width: 92%;
+    border-bottom: calc(1px + (4 - 1)*((100vh - 480px) / (1440 - 480))) solid var(--ion-color-primary-shade);
     ion-buttons{
-        border-bottom: 0.1mm solid var(--ion-color-primary-shade);
-        ion-item{
-            --border-color: transparent;
-            --padding-start: 0;
-            --inner-padding-end: 1vw;
-            --inner-padding-start: 1vw;
-        }
-        ion-item:first-child > ion-button.md.button.button-large{
-            --padding-start: 0;
-        }
-        ion-item:last-child > ion-button.md.button.button-large{
-            --padding-end: 0;
-        }
-        ion-item.selected{
-            border-bottom: 2px solid var(--ion-color-secondary);
-            ion-button.md.button.button-large{
-                color: var(--ion-color-secondary);
-            }
-        }
+        width: 100%;
         ion-button.md.button.button-large {
             font-size: calc(12px + (32 - 12)*((100vw - 800px) / (2560 - 800)));
             font-weight: normal;
             --color: var(--ion-toolbar-color);
+            height: 100%;
+            --padding-end: 1vw;
+            --padding-start: 1vw;
+        }
+        ion-button.md.button.button-large:first-child{
+            --padding-start: 0;
+        }
+        ion-button.md.button.button-large:last-child{
+            --padding-end: 0;
+        }
+        ion-button.md.button.button-large.selected{
+            color: var(--ion-color-secondary);
+            border-bottom: calc(2px + (7 - 2)*((100vh - 480px) / (1440 - 480))) solid var(--ion-color-secondary);
         }
     }
 }

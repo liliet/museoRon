@@ -1,9 +1,13 @@
 ion-header, ion-content{
     background: rgba(0, 0, 0, .9);
 }
-#closeModalBtn{
-    width: 10em;
-    margin: 20px 0;
+#closeModalBtn {
+    width: auto;
+    height: auto;
+    margin: 3vh 2vw 0 0;
+    ion-icon{
+        font-size: calc(40px + (92 - 40)*((100vw - 800px) / (2560 - 800)));
+    }
 }
 ion-content{
     --padding-start: 4%;
