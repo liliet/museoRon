@@ -5,11 +5,11 @@ ion-content{
     --padding-end: 8%;
     .items{
         padding: 0;
-        column-gap: 8px;
+        column-gap: calc(8px + (18 - 8)*((100vw - 800px) / (2560 - 800)));
         ion-card {
             text-align: center;
             border-radius: 0;
-            margin: 0 0 8px 0;
+            margin: 0 0 calc(8px + (18 - 8)*((100vw - 800px) / (2560 - 800))) 0;
             ion-card-header{
                 padding: 0;
             }
@@ -20,7 +20,7 @@ ion-content{
             }
             ion-card-title{
                 font-family: Calibri Bold;
-                font-size: 65%;
+                font-size: calc(9px + (22 - 9)*((100vw - 800px) / (2560 - 800)));
                 font-weight: bold;
                 color: black;
                 width: 100%;
@@ -45,17 +45,17 @@ ion-content{
         column-count: 3;
     }
 }
-@media (min-width: 576px) {
+@media (min-width: 768px) {
     .items {
         column-count: 4;
     }
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .items {
         column-count: 5;
     }
 }
-@media (min-width: 992px) {
+@media (min-width: 1440px) {
     .items {
         column-count: 6;
     }

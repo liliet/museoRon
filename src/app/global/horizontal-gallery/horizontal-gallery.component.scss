@@ -1,42 +1,69 @@
+ion-slides{
+    width: 100%;
+    height: 100%;
+}
 ion-card{
-    margin-top: 0;
+    width: 100%;
+    height: 100%;
     overflow: visible;
-}
-ion-card-header{
-    padding: 0;
-}
-ion-card-title{
-    font-family: 'Myriad Pro';
-    font-size: 14px;
-    padding-top: 30px;
-    color: var(--ion-color-h2);
-}
-ion-card-content{
-    padding: 0;
-    margin-top: 8%;
-    width: calc(100% + 100px);
-    left: -50px;
-    text-align: justify;
-    ion-label{
-        font-size: 23px;
-        font-weight: bolder;
-        color: var(--ion-color-galstep);
-        position: absolute;
-        left: -55px;
-        background: url('/assets/icon/step.png');
-        width: 45px;
-        height: 53px;
-        padding: 9px 0;
-        text-align: center;
+    ion-card-header{
+        padding: 0;
+        height: 80%;
     }
-    ion-note{
-        font-family: 'Calibri';
-        font-size: 16px;
-        color: var(--ion-color-galhor);
+    ion-card-title{
+        font-family: 'Myriad Pro';
+        font-size: calc(11px + (32 - 11)*((100vw - 800px) / (2560 - 800)));
+        padding-top: 2vh;
+        color: var(--ion-color-h2);
+        font-weight: lighter;
+    }
+}
+.sc-ion-card-md-s img{
+    height: 100%;
+    width: auto;
+    max-width: none;
+}
+ion-card.steps{
+    ion-card-header{
+        height: 75%;
+    }
+    ion-card-content{
+        padding: 0;
+        max-width: 190%;
+        min-width: 110%;
+        width: calc(326px + (871 - 326)*((100vw - 800px) / (2560 - 800)));
+        left: calc(-52px + (0 + 52)*((100vw - 800px) / (2560 - 800)));
+        text-align: justify;
+        position: absolute;
+        top: 75%;
+        height: 25%;
+        ion-label{
+            font-size: calc(20px + (48 - 20)*((100vw - 800px) / (2560 - 800)));
+            font-weight: bolder;
+            color: var(--ion-color-galstep);
+            position: absolute;
+            left: calc(((38px + (100 - 38)*((100vw - 800px) / (2560 - 800))) + 1vw) * -1);
+            background: url('/assets/icon/step.png') no-repeat;
+            background-size: contain;
+            width: calc(38px + (100 - 38)*((100vw - 800px) / (2560 - 800)));
+            line-height: calc(40px + (120 - 40)*((100vh - 480px) / (1440 - 480)));
+            text-align: center;
+        }
+        ion-note{
+            font-family: 'Calibri';
+            font-size: calc(12px + (36 - 12)*((100vw - 800px) / (2560 - 800)));
+            line-height: 1.1;
+            color: var(--ion-color-galhor);
+            position: absolute;
+            height: 100%;
+            overflow: scroll;
+        }
     }
 }
 .swiper-slide{
     opacity: .18;
+    transform: scale(0.8);
+    height: 80%;
     margin: auto;
     ion-card-title, ion-card-content{
         visibility: hidden;
@@ -44,6 +71,8 @@ ion-card-content{
 }
 .swiper-slide-active{
     opacity: 1;
+    transform: scale(1);
+    height: 100%;
     ion-card-title, ion-card-content{
         visibility: visible;
     }
@@ -51,21 +80,25 @@ ion-card-content{
 .swiper-button-prev, .swiper-button-next{
     position: fixed;
     top: auto;
-    bottom: 20%;
-    width: 51px;
-    height: 51px;
+    bottom: 15%;
+    width: 8vh;
+    height: 8vh;
 }
 .swiper-button-prev{
-    background: url('/assets/icon/prev_icon.svg');
+    background: url('/assets/icon/prev_icon.svg') no-repeat;
+    background-size: contain;
     left: 15%;
 }
 .swiper-button-prev:disabled{
-    background: url('/assets/icon/prev_icon_disabled.svg');
+    background: url('/assets/icon/prev_icon_disabled.svg') no-repeat;
+    background-size: contain;
 }
 .swiper-button-next{
-    background: url('/assets/icon/next_icon.svg');
+    background: url('/assets/icon/next_icon.svg') no-repeat;
+    background-size: contain;
     right: 15%;
 }
 .swiper-button-next:disabled{
-    background: url('/assets/icon/next_icon_disabled.svg');
+    background: url('/assets/icon/next_icon_disabled.svg') no-repeat;
+    background-size: contain;
 }

@@ -5,9 +5,12 @@ div.evolucion{
 ion-slide{
     width: auto;
 }
+ion-card{
+    width: 11vw;
+}
 ion-card-header{
     padding: 0;
 }
 ion-card-title{
-    font-size:24px;
+    font-size: calc(16px + (48 - 16)*((100vw - 800px) / (2560 - 800)));
 }

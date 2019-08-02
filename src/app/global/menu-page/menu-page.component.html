@@ -1,5 +1,5 @@
 <ion-toolbar no-border>
-  <ion-buttons justify-content-center>
+  <ion-buttons>
     <div *ngFor="let item of menus; let last = last; let i = index; trackBy: trackByMenu" class="menu-btn" [class.selected]="item.selected">
       <ion-button size="large" [routerLink]="[item.route]">{{ item.text }}</ion-button>
       <ion-icon *ngIf="!last" slot="icon-only" src="/assets/icon/dot_icon.svg" [class.selected]="menus[i+1].selected"></ion-icon>

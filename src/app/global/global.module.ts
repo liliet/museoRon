@@ -6,7 +6,7 @@ import { ModalComponent } from './modal/modal.component';
 import { MenuPageComponent } from './menu-page/menu-page.component';
 import { RouterModule } from '@angular/router';
 import { PageTypeOneComponent } from './page-type-one/page-type-one.component';
-import { ZoomComponent } from './modal/zoom.component';
+import { ZoomComponent } from './modal/zoom/zoom.component';
 import { EvolucionComponent } from './modal/evolucion/evolucion.component';
 import { PageTypeTwoComponent } from './page-type-two/page-type-two.component';
 import { HorizontalGalleryComponent } from './horizontal-gallery/horizontal-gallery.component';

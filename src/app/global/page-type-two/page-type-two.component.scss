@@ -4,14 +4,14 @@ ion-header{
 ion-content{
     position: fixed;
     --padding-top: 2%;
-    top: 8%;
-    height: 88%;
+    top: 6vh;
+    height: 70vh;
     --padding-start: 6%;
     --padding-end: 6%;
 }
 ion-content.submenu{
-    top: 18%;
-    height: 76%;
+    top: 12vh;
+    height: 65vh;
     --padding-start: 10%;
     --padding-end:10%;
 }

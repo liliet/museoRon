@@ -1,16 +1,20 @@
 div.content{
-    padding: 8%;
+    margin: 0 8%;
+    height: 95%;
     div.text{
         font-family: 'Calibri';
-        font-size: 14px;
+        font-size: calc(11px + (32 - 11)*((100vw - 800px) / (2560 - 800)));
         color: var(--ion-text-color);
         float: left;
-        width: 70%;
+        width: 68%;
         text-align: justify;
     }
     div.left{
         float: right;
         width: 30%;
         padding: 0 2%;
+        img{
+            width: 90%;
+        }
     }
 }

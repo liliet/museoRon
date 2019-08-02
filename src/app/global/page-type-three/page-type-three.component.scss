@@ -3,23 +3,25 @@ ion-header{
 }
 ion-content{
     position: fixed;
-    --padding-top: 2%;
-    top: 8%;
-    height: 88%;
+    top: 6vh;
+    height: 75vh;
     --padding-start: 8%;
     --padding-end: 8%;
     .images{
         column-gap: 0;
         column-fill: auto;
         .one-image {
-            margin: 2px;
+            margin: calc(2px + (5 - 2)*((100vw - 800px) / (2560 - 800)));
             text-align: center;
         }
     }
 }
+img{
+    width: 100%;
+}
 ion-content.submenu{
-    top: 18%;
-    height: 76%;
+    top: 12vh;
+    height: 69vh;
     --padding-start: 10%;
     --padding-end:10%;
 }

@@ -2,8 +2,10 @@
   <sp-menu-page [menus]="menus" [submenus]="submenus"></sp-menu-page>
 </ion-header>
 <ion-content [class.submenu]="submenus" slots="fixed">
-  <div class="text" [innerHtml]="textContent" [style.width.%]="images ? textWidth : 100"></div>
-  <div *ngIf="images" class="left" [style.width.%]="100 - textWidth">
-    <sp-vertical-gallery [images]="images"></sp-vertical-gallery>
+  <div class="content">
+    <div class="text" [innerHtml]="textContent" [style.width.%]="images ? textWidth : 100"></div>
+    <div *ngIf="images" class="left" [style.width.%]="100 - textWidth">
+      <sp-vertical-gallery [images]="images"></sp-vertical-gallery>
+    </div>
   </div>
 </ion-content>

@@ -6,8 +6,8 @@ ion-content {
 }
 ion-button {
   display: block;
-  width: 17em;
-  margin: 5vh auto;
-  font-size: 0.85rem;;
+  width: 16em;
+  margin: 5vh auto 0;
+  font-size: calc(14px + (36 - 14)*((100vw - 800px) / (2560 - 800)));
   text-transform: uppercase;
 }

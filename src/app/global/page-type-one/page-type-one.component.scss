@@ -3,33 +3,29 @@ ion-header{
 }
 ion-content{
     position: fixed;
-    top: 7%;
-    height: 90%;
-  --padding-start: 4%;
-  --padding-end: 4%;
+    top: 6vh;
+    height: 75vh;
+    --padding-start: 4%;
+    --padding-end: 4%;
     div.text{
         font-family: 'Calibri';
-        font-size: 0.9rem;
+        font-size: calc(12px + (34 - 12)*((100vw - 800px) / (2560 - 800)));
         color: var(--ion-text-color);
         float: left;
-        /* height: 100%;
-        overflow: auto; */
         text-align: justify;
     }
     div.left{
         float: right;
-        /* height: 100%;
-        overflow: auto; */
         padding: 0 2%;
     }
 }
 ion-content.submenu{
-    top: 20%;
-    height: 76%;
+    top: 12vh;
+    height: 69vh;
     --padding-start: 8%;
     --padding-end:8%;
     div.text{
-        font-size: 14px;
+        font-size: calc(11px + (32 - 11)*((100vw - 800px) / (2560 - 800)));
         th, td {
             border: 0.1mm solid var(--ion-color-medium-shade);
             padding: 5px;

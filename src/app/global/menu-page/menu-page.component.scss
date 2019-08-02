@@ -1,15 +1,25 @@
 ion-toolbar{
-    --min-height: 8%;
+    height: 6vh;
+    ion-buttons{
+        position: absolute;
+        top: 0;
+        height: 6vh;
+    }
 }
 ion-toolbar ion-button.md.button.button-large {
-  font-size: 1rem;
   font-weight: bold;
+  font-size: 1em;
+  height: auto;
   --padding-start: 0;
   --padding-end: 0;
 }
 div.menu-btn{
     display: flex;
     --color: var(--ion-color-tertiary);
+    font-size: calc(14px + (40 - 14)*((100vw - 800px) / (2560 - 800)));
+    ion-icon{
+        font-size: 1em;
+    }
 }
 div.selected, ion-icon.selected {
     color: var(--ion-color-primary);
@@ -17,11 +27,12 @@ div.selected, ion-icon.selected {
 ion-toolbar.submenu{
     padding: 0 4%;
     ion-buttons{
-        border-bottom: 0.1mm solid var(--ion-color-secondary);
+        border-bottom: 0.1mm solid var(--ion-color-primary-shade);
         ion-item{
             --border-color: transparent;
             --padding-start: 0;
-            --inner-padding-end: 8px;
+            --inner-padding-end: 1vw;
+            --inner-padding-start: 1vw;
         }
         ion-item:first-child > ion-button.md.button.button-large{
             --padding-start: 0;
@@ -36,7 +47,7 @@ ion-toolbar.submenu{
             }
         }
         ion-button.md.button.button-large {
-            font-size: 14px;
+            font-size: calc(12px + (32 - 12)*((100vw - 800px) / (2560 - 800)));
             font-weight: normal;
             --color: var(--ion-toolbar-color);
         }

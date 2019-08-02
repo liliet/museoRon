@@ -3,14 +3,14 @@ ion-header{
 }
 ion-content{
     position: fixed;
-    top: 17%;
-    height: 76%;
+    top: 12vh;
+    height: 68vh;
     --padding-start: 8%;
     --padding-end:8%;
     font-family: 'Calibri';
-    font-size: 13px;
+    font-size: calc(11px + (30 - 11)*((100vw - 800px) / (2560 - 800)));
     h2{
-        font-size: 16px;
+        font-size: calc(12px + (34 - 12)*((100vw - 800px) / (2560 - 800)));
     }
     table{
         width: 100%;
@@ -39,7 +39,7 @@ ion-content{
     }
     hr{
         position: fixed;
-        bottom: 5%;
+        bottom: 2vh;
         height: 4px;
         width: 84%;
         background-color: var(--ion-color-h2);
