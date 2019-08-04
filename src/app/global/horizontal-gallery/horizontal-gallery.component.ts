@@ -2,6 +2,8 @@ import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { GalleryImage } from '../gallery-image';
 import { IonSlides, ModalController } from '@ionic/angular';
 import { ModalComponent } from '../modal/modal.component';
+import { enterModalAnimation } from 'src/app/animations/enterModalAnimation';
+import { leaveModalAnimation } from 'src/app/animations/leaveModalAnimation';
 
 @Component({
   selector: 'sp-horizontal-gallery',
@@ -14,6 +16,8 @@ export class HorizontalGalleryComponent implements OnInit {
   @Input() spaceBetween: number;
   @Input() slidesPerView: number;
   @Input() likeSteps = false;
+  @Input() initialSlide = 0;
+  @Input() hasDetail = false;
   @ViewChild('slides') slides: IonSlides;
   sliderOpts: any;
   isBegining = true;
@@ -30,7 +34,8 @@ export class HorizontalGalleryComponent implements OnInit {
       zoom: false,
       spaceBetween: (this.spaceBetween) ? this.spaceBetween : 10,
       slidesPerView: (this.slidesPerView) ? this.slidesPerView : 3,
-      centeredSlides: true
+      centeredSlides: true,
+      initialSlide: this.initialSlide
     };
   }
 
@@ -55,20 +60,22 @@ export class HorizontalGalleryComponent implements OnInit {
     });
   }
 
-  openDetail(img: GalleryImage): void {
-    if (!img.templateType) {
+  openDetail(index: number): void {
+    if (!this.hasDetail || !this.images[index].templateType) {
       return;
     }
     this.modalCtrl.create({
       component: ModalComponent,
       componentProps: {
-        img
+        images: this.images,
+        index
       },
       keyboardClose: true,
-      cssClass: 'modalPage'
+      cssClass: 'modalPage',
+      enterAnimation: enterModalAnimation,
+      leaveAnimation: leaveModalAnimation
     }).then(modal => {
       modal.present();
     });
   }
-
 }

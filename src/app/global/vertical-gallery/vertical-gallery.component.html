@@ -1,5 +1,5 @@
 <ion-slides [options]="sliderOpts" scrollbar="true">
-  <ion-slide *ngFor="let img of images; trackBy: trackByImage" (click)="openDetail(img)">
+  <ion-slide *ngFor="let img of images; index as i; trackBy: trackByImage" (click)="openDetail(i)">
     <ion-card>
       <ion-card-header>
         <img [src]="img.src" fxLayoutAlign="center start" />

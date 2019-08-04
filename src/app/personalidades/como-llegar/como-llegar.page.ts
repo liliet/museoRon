@@ -23,7 +23,7 @@ export class ComoLlegarPage extends PersonalidadesAppPage implements OnInit {
     this.menuSelectId = 3;
     this.selectPageMenu();
     this.images = [
-      new GalleryImage(1, `assets/${this.routeBasePath}/maestro_ronero.jpg`, '')
+      new GalleryImage(1, `assets${this.routeBasePath}/maestro_ronero.jpg`, '')
     ];
     this.textWidth = 68;
     // tslint:disable-next-line: max-line-length

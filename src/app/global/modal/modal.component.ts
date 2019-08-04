@@ -8,7 +8,8 @@ import { GalleryImage } from '../gallery-image';
   styleUrls: ['./modal.component.scss'],
 })
 export class ModalComponent implements OnInit {
-  img: GalleryImage;
+  images: Array<GalleryImage>;
+  index: number;
 
   constructor(
     private navParams: NavParams,
@@ -18,7 +19,8 @@ export class ModalComponent implements OnInit {
   ngOnInit() { }
 
   ionViewWillEnter() {
-    this.img = this.navParams.get('img');
+    this.images = this.navParams.get('images');
+    this.index = this.navParams.get('index');
   }
 
   closeModal() {

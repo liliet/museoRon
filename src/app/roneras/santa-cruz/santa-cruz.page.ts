@@ -23,7 +23,7 @@ export class SantaCruzPage extends RonerasAppPage implements OnInit {
     this.menuSelectId = 4;
     this.selectPageMenu();
     this.images = [
-      new GalleryImage(1, `assets/${this.routeBasePath}/santa_cruz.jpg`, '')
+      new GalleryImage(1, `assets${this.routeBasePath}/santa_cruz.jpg`, '')
     ];
     this.textWidth = 68;
     // tslint:disable-next-line: max-line-length

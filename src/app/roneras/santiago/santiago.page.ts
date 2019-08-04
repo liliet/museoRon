@@ -23,7 +23,7 @@ export class SantiagoPage extends RonerasAppPage implements OnInit {
     this.menuSelectId = 5;
     this.selectPageMenu();
     this.images = [
-      new GalleryImage(1, `assets/${this.routeBasePath}/santiago_cuba.jpg`, '')
+      new GalleryImage(1, `assets${this.routeBasePath}/santiago_cuba.jpg`, '')
     ];
     this.textWidth = 68;
     // tslint:disable-next-line: max-line-length

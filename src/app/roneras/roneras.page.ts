@@ -23,7 +23,7 @@ export class RonerasPage extends RonerasAppPage implements OnInit {
     this.menuSelectId = 2;
     this.selectPageMenu();
     this.images = [
-      new GalleryImage(1, `assets/${this.routeBasePath}/central.jpg`, '')
+      new GalleryImage(1, `assets${this.routeBasePath}/central.jpg`, '')
     ];
     this.textWidth = 68;
     // tslint:disable-next-line: max-line-length

@@ -1,5 +1,3 @@
 <div align="center" class="zoom">
-    <img [src]="img.src" fxLayoutAlign="center start" />
-    <br />
-    <ion-label *ngIf="img.label">{{ img.label }}</ion-label>
+    <sp-horizontal-gallery [images]="images" [slidesPerView]="1" [initialSlide]="initial"></sp-horizontal-gallery>
 </div>

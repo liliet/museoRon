@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 import { FileOpener } from '@ionic-native/file-opener/ngx';
+import { File } from '@ionic-native/file/ngx';
 
 @Component({
   selector: 'sp-conferencias',
@@ -41,15 +42,15 @@ export class ConferenciasPage implements OnInit {
 
   constructor(
     private menuCtrl: MenuController,
+    private file: File,
     private fileOpener: FileOpener
   ) {
-    const basePath = 'assets/conferencias/';
     this.files = [
-      { file: `${basePath}Conferencia de la Dra Olga Portuondo.pdf`, ext: 'pdf', name: 'Conferencia de la Dra Olga Portuondo' },
-      { file: `${basePath}Don Arturo (doc prensa).pdf`, ext: 'pdf', name: 'Don Arturo (doc prensa)' },
-      { file: `${basePath}Acerca de los maestros roneros.pdf`, ext: 'pdf', name: 'Acerca de los maestros roneros del lado oscuro de la luna' },
-      { file: `${basePath}El ingenio del mambí.pdf`, ext: 'pdf', name: 'El ingenio del mambí' },
-      { file: `${basePath}Historia y procesos sobre el  ron.pdf`, ext: 'pdf', name: 'Historia y procesos sobre el  ron' }
+      { file: `Conferencia de la Dra Olga Portuondo.pdf`, ext: 'pdf', name: 'Conferencia de la Dra Olga Portuondo' },
+      { file: `Don Arturo (doc prensa).pdf`, ext: 'pdf', name: 'Don Arturo (doc prensa)' },
+      { file: `Acerca de los maestros roneros.pdf`, ext: 'pdf', name: 'Acerca de los maestros roneros del lado oscuro de la luna' },
+      { file: `El ingenio del mambí.pdf`, ext: 'pdf', name: 'El ingenio del mambí' },
+      { file: `Historia y procesos sobre el  ron.pdf`, ext: 'pdf', name: 'Historia y procesos sobre el  ron' }
     ];
   }
 
@@ -61,10 +62,25 @@ export class ConferenciasPage implements OnInit {
   }
 
   open(file: string, ext: string) {
+    const basePath = this.file.applicationDirectory + 'www/assets/conferencias/';
     const mimeType = this.MIMETypes[ext];
-    this.fileOpener.open(file, mimeType)
-      .then(() => console.log('Archivo abierto'))
-      .catch(ex => console.log('Error abriendo archivo', ex));
+    this.file.checkFile(this.file.dataDirectory, file)
+      .then(exits => {
+        if (!exits) {
+          this.file.copyFile(basePath, file, this.file.dataDirectory, file)
+            .then(entry => {
+              this.fileOpener.open(entry.nativeURL, mimeType)
+                .then(() => console.log('Archivo abierto'))
+                .catch(ex => console.log('Error abriendo archivo', ex));
+            })
+            .catch(ex => console.log('Error copiando archivo', ex));
+        } else {
+            this.fileOpener.open(this.file.dataDirectory + file, mimeType)
+            .then(() => console.log('Archivo abierto'))
+            .catch(ex => console.log('Error abriendo archivo', ex));
+        }
+      })
+      .catch(ex => console.log('Ha ocurrido un error', ex));
   }
 
 }

@@ -23,7 +23,7 @@ export class HumbertoPage extends FigurasAppPage implements OnInit {
     this.submenuSelectId = 3;
     this.selectPageMenu();
     this.images = [
-      new GalleryImage(1, `assets/${this.routeBasePath}/humberto.jpg`, 'Humberto Corona')
+      new GalleryImage(1, `assets${this.routeBasePath}/humberto.jpg`, 'Humberto Corona')
     ];
     this.textWidth = 68;
     // tslint:disable-next-line: max-line-length

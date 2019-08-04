@@ -4,7 +4,7 @@
 <ion-content [class.submenu]="submenus" slots="fixed">
   <div class="content">
     <div class="images">
-      <div class="one-image" *ngFor="let img of images; trackBy: trackByImage" (click)="openDetail(img)">
+      <div class="one-image" *ngFor="let img of images; index as i; trackBy: trackByImage" (click)="openDetail(i)">
         <img [src]="img.src" />
       </div>
     </div>

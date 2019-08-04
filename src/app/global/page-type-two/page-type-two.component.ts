@@ -15,6 +15,7 @@ export class PageTypeTwoComponent implements OnInit {
   @Input() spaceBetween: number;
   @Input() slidesPerView: number;
   @Input() likeSteps: boolean;
+  @Input() hasDetail = false;
 
   constructor() { }
 

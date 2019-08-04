@@ -23,7 +23,7 @@ export class ToneleriaPage extends ToneleriaAppPage implements OnInit {
     this.submenuSelectId = 1;
     this.selectPageMenu();
     this.images = [
-      new GalleryImage(1, `assets/${this.routeBasePath}/barriles.jpg`, 'Toneles de Roble Blanco')
+      new GalleryImage(1, `assets${this.routeBasePath}/barriles.jpg`, 'Toneles de Roble Blanco')
     ];
     this.textWidth = 68;
 // tslint:disable-next-line: max-line-length

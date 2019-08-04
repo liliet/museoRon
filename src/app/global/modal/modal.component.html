@@ -7,9 +7,9 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-<ion-content class="content" [ngSwitch]="img?.templateType">
+<ion-content class="content" [ngSwitch]="images[index]?.templateType">
   <sp-alambique *ngSwitchCase="'alambique'"></sp-alambique>
-  <sp-biografia *ngSwitchCase="'biografia'" [img]="img"></sp-biografia>
+  <sp-biografia *ngSwitchCase="'biografia'" [img]="images[index]"></sp-biografia>
   <sp-evolucion *ngSwitchCase="'evolución'"></sp-evolucion>
-  <sp-zoom *ngSwitchDefault [img]="img"></sp-zoom>
+  <sp-zoom *ngSwitchDefault [images]="images" [initial]="index"></sp-zoom>
 </ion-content>

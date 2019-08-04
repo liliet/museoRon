@@ -23,7 +23,7 @@ export class ArturoPage extends FigurasAppPage implements OnInit {
     this.submenuSelectId = 2;
     this.selectPageMenu();
     this.images = [
-      new GalleryImage(1, `assets/${this.routeBasePath}/arturo.jpg`, 'Arturo García Núñez')
+      new GalleryImage(1, `assets${this.routeBasePath}/arturo.jpg`, 'Arturo García Núñez')
     ];
     this.textWidth = 68;
     // tslint:disable-next-line: max-line-length

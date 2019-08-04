@@ -34,8 +34,8 @@
       </ion-content>
     </ion-menu>
     <ion-header no-border>
-      <ion-toolbar no-border mode="ios">
-        <ion-title></ion-title>
+      <ion-toolbar no-border>
+        <ion-button [routerLink]="['/']" class="title" fill="clear"></ion-button>
         <ion-buttons slot="end">
           <ion-menu-button>
             <ion-icon src="/assets/icon/menu_icon.svg"></ion-icon>
@@ -43,5 +43,5 @@
         </ion-buttons>
       </ion-toolbar>
     </ion-header>
-    <ion-router-outlet main></ion-router-outlet>
+    <ion-router-outlet main animated="false"></ion-router-outlet>
 </ion-app>

@@ -23,7 +23,7 @@ export class FigurasPage extends FigurasAppPage implements OnInit {
     this.submenuSelectId = 1;
     this.selectPageMenu();
     this.images = [
-      new GalleryImage(1, `assets/${this.routeBasePath}/facundo.jpg`, 'Don Facundo Bacardí Massó')
+      new GalleryImage(1, `assets${this.routeBasePath}/facundo.jpg`, 'Don Facundo Bacardí Massó')
     ];
     this.textWidth = 68;
 // tslint:disable-next-line: max-line-length

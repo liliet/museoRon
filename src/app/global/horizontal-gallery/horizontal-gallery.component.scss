@@ -15,13 +15,13 @@ ion-card{
         font-size: calc(11px + (32 - 11)*((100vw - 800px) / (2560 - 800)));
         padding-top: 2vh;
         color: var(--ion-color-h2);
-        font-weight: lighter;
     }
 }
 .sc-ion-card-md-s img{
     height: 100%;
     width: auto;
     max-width: none;
+    margin: auto;
 }
 ion-card.steps{
     ion-card-header{
@@ -46,6 +46,7 @@ ion-card.steps{
             background: url('/assets/icon/step.png') no-repeat;
             background-size: contain;
             width: calc(38px + (100 - 38)*((100vw - 800px) / (2560 - 800)));
+            min-width: 38px;
             line-height: calc(40px + (120 - 40)*((100vh - 480px) / (1440 - 480)));
             text-align: center;
         }
@@ -80,7 +81,7 @@ ion-card.steps{
 .swiper-button-prev, .swiper-button-next{
     position: fixed;
     top: auto;
-    bottom: 15%;
+    bottom: 10%;
     width: 8vh;
     height: 8vh;
 }

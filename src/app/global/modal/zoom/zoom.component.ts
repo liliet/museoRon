@@ -8,7 +8,8 @@ import { GalleryImage } from '../../gallery-image';
 })
 export class ZoomComponent implements OnInit {
 
-    @Input() img: GalleryImage;
+    @Input() images: Array<GalleryImage>;
+    @Input() initial: number;
 
     ngOnInit() { }
 }

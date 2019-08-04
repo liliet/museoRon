@@ -23,7 +23,7 @@ export class MarianoPage extends FigurasAppPage implements OnInit {
     this.submenuSelectId = 4;
     this.selectPageMenu();
     this.images = [
-      new GalleryImage(1, `assets/${this.routeBasePath}/mariano.jpg`, 'Mariano Lavigne')
+      new GalleryImage(1, `assets${this.routeBasePath}/mariano.jpg`, 'Mariano Lavigne')
     ];
     this.textWidth = 68;
     // tslint:disable-next-line: max-line-length

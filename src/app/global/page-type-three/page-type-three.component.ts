@@ -3,6 +3,8 @@ import { MenuItem } from '../menu-page/menu-item';
 import { GalleryImage } from '../gallery-image';
 import { ModalController } from '@ionic/angular';
 import { ModalComponent } from '../modal/modal.component';
+import { enterModalAnimation } from 'src/app/animations/enterModalAnimation';
+import { leaveModalAnimation } from 'src/app/animations/leaveModalAnimation';
 
 @Component({
   selector: 'sp-page-type-three',
@@ -51,17 +53,20 @@ export class PageTypeThreeComponent implements OnInit {
     return img.id;
   }
 
-  openDetail(img: GalleryImage): void {
-    if (!img.templateType) {
+  openDetail(index: number): void {
+    if (!this.images[index].templateType) {
       return;
     }
     this.modalCtrl.create({
       component: ModalComponent,
       componentProps: {
-        img
+        images: this.images,
+        index
       },
       keyboardClose: true,
-      cssClass: 'modalPage'
+      cssClass: 'modalPage',
+      enterAnimation: enterModalAnimation,
+      leaveAnimation: leaveModalAnimation
     }).then(modal => {
       modal.present();
     });
