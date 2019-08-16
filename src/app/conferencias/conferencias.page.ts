@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
-import { FileOpener } from '@ionic-native/file-opener/ngx';
 import { File } from '@ionic-native/file/ngx';
+import { FileOpener } from '@ionic-native/file-opener/ngx';
 
 @Component({
   selector: 'sp-conferencias',
@@ -62,25 +62,23 @@ export class ConferenciasPage implements OnInit {
   }
 
   open(file: string, ext: string) {
-    const basePath = this.file.applicationDirectory + 'www/assets/conferencias/';
     const mimeType = this.MIMETypes[ext];
     this.file.checkFile(this.file.dataDirectory, file)
-      .then(exits => {
-        if (!exits) {
-          this.file.copyFile(basePath, file, this.file.dataDirectory, file)
-            .then(entry => {
-              this.fileOpener.open(entry.nativeURL, mimeType)
-                .then(() => console.log('Archivo abierto'))
-                .catch(ex => console.log('Error abriendo archivo', ex));
-            })
-            .catch(ex => console.log('Error copiando archivo', ex));
-        } else {
-            this.fileOpener.open(this.file.dataDirectory + file, mimeType)
+      .then(() => {
+          this.fileOpener.open(this.file.dataDirectory + file, mimeType)
             .then(() => console.log('Archivo abierto'))
             .catch(ex => console.log('Error abriendo archivo', ex));
-        }
       })
-      .catch(ex => console.log('Ha ocurrido un error', ex));
+      .catch(() => {
+        this.file.copyFile(this.file.applicationDirectory + 'www/assets/conferencias/', file, this.file.dataDirectory, file)
+          .then(entry => {
+            console.log('Archivo copiado');
+            this.fileOpener.open(entry.nativeURL, mimeType)
+              .then(() => console.log('Archivo abierto'))
+              .catch(ex => console.log('Error abriendo archivo', ex));
+          })
+          .catch(ex => console.log('Error copiando archivo', ex));
+      });
   }
 
 }

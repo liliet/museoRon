@@ -47,7 +47,7 @@ ion-card.steps{
             background-size: contain;
             width: calc(38px + (100 - 38)*((100vw - 800px) / (2560 - 800)));
             min-width: 38px;
-            line-height: calc(40px + (120 - 40)*((100vh - 480px) / (1440 - 480)));
+            line-height: calc(46px + (120 - 46)*((100vh - 480px) / (1440 - 480)));
             text-align: center;
         }
         ion-note{
