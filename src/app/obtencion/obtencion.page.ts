@@ -32,7 +32,7 @@ export class ObtencionPage extends ObtencionAppPage implements OnInit {
 // tslint:disable-next-line: max-line-length
       new GalleryImage(4, `assets${this.routeBasePath}/proceso4.png`, 'El aguardiente natural a 75 por ciento de alcohol es añejado en barriles de roble blanco por 1 y 3 años. Es tal la importancia de este aguardiente en el aroma y sabor del ron que en Cuba lo hemos identificado como “alma del ron cubano”.'),
 // tslint:disable-next-line: max-line-length
-      new GalleryImage(5, `assets${this.routeBasePath}/proceso5.png`, 'Por último, y antes de su expedición para el consumo, se efectúan las mezclas adecuadas para lograr una calidad homogénea; a veces se le da color artificialmente con azúcar quemado o caramelo y, por último, se clarifica por filtración o encolado.')
+      /* new GalleryImage(5, `assets${this.routeBasePath}/proceso5.png`, 'Por último, y antes de su expedición para el consumo, se efectúan las mezclas adecuadas para lograr una calidad homogénea; a veces se le da color artificialmente con azúcar quemado o caramelo y, por último, se clarifica por filtración o encolado.') */
     ];
   }
 
